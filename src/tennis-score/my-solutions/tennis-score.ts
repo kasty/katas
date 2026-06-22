@@ -4,6 +4,8 @@ interface Player {
 }
 
 export class TennisGame {
+  // TODO: encapsuler en `#players` privé + accesseurs lecture (scoreOf/gamesWonBy)
+  // pour empêcher la mutation externe ; piloter les tests via incrementScoreByPlayerIndex
   players: Array<Player> = [
     { score: 0, game: 0 },
     { score: 0, game: 0 }
