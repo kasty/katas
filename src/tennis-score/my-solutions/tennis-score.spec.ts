@@ -44,10 +44,15 @@ describe('TennisScore', () => {
     expect(game.players[0].game).toEqual(1)
   })
 
-  it('should should not add a game to player 1', () => {
+  it('should not add a game to player 1', () => {
     game.players[0].score = 3
     game.players[1].score = 3
     game.incrementScoreByPlayerIndex(0)
     expect(game.players[0].game).toEqual(0)
   })
+
+  it.todo('should win a love game (4 points in a row from 0-0)')
+  it.todo('should win the game after advantage (deuce, then 2 points)')
+  it.todo('should not win after advantage on a single point (5-3 needed, not 4-3)')
+  it.todo('should return to deuce when the opponent had advantage')
 })
